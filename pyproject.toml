@@ -2,9 +2,11 @@
 name = "freshwater"
 version = "0.1.0"
 description = "Python module for estimating thermodynamic properties of water in freshwater lakes."
-authors = ["danielrobb <danielrobb@gmail.com>"]
 license = "MIT"
+authors = ["danielrobb <danielrobb@gmail.com>"]
 readme = "README.md"
+homepage = "https://github.com/danielrobb/freshwater"
+repository = "https://github.com/danielrobb/freshwater"
 keywords = ["limnology", "density", "water", "equation of state"]
 classifiers = [
     "Intended Audience :: Science/Research",
