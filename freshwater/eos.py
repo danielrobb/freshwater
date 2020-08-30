@@ -7,36 +7,39 @@ class Eos():
     Attributes
     ----------
     t : array_like
-        temperature (deg C)
+        temperature (:math:`\mathrm{^{\circ} C}`)
     s : array_like
         salinity (g/kg) grams of dissolved salt in 1 kg of lake water
     p : array_like
         pressure (bar) applied pressure
     rho : array_like
-        density of lake water (kg m^{-3})
+        density of lake water (:math:`\mathrm{kg \, m^{-3}}`)
     alpha : array_like
-        Coefficient of thermal expansion (1/(deg C))
+        Coefficient of thermal expansion :math:`\mathrm{(^{\circ} C)^{-1}}`
     tmd : array_like
-        Temperature of maximum density (deg C)
+        Temperature of maximum density (:math:`\mathrm{^{\circ} C}`)
     u : array_like
-        Speed of sound (:math:`\mathrm{m s^{-1}}`)
+        Speed of sound (:math:`\mathrm{m \, s^{-1}}`)
     cp : array_like
-        Specific heat capacity (J kg^{-1} deg^{-1})
+        Specific heat capacity (:math:`\mathrm{J \, kg^{-1} \, ^{\circ} C^{-1}}`)
     tf : array_like
-        Freezing point of lake water (deg C)
+        Freezing point of lake water (:math:`\mathrm{^{\circ} C}`)
 
     References
     ----------
     .. [1] Chen, C. T. A., & Millero, F. J. (1986). Thermodynamic properties 
-    for natural waters covering only the limnological range 1. Limnology and 
-    Oceanography, 31(3), 657-662.
+        for natural waters covering only the limnological range 1. Limnology and
+        Oceanography, 31(3), 657-662.
 
     Examples
     --------
-    # Import the Eos (Equation of state class) from the freshwater module
+    Import the class Eos (Equation of state) from the freshwater module
+
     >>> from freshwater.eos import Eos
-    # Compute properties of lake water with a temperature of 10 deg C,
-    # a salinity of 0.5 g/kg and a pressure of 0 bar (gauge pressure).
+
+    Compute properties of lake water with a temperature of 10 deg C,
+    a salinity of 0.5 g/kg and a pressure of 0 bar (gauge pressure).
+
     >>> e = Eos(t=10, s=0.5, p=0)
     >>> e.rho
     1000.091963
@@ -104,4 +107,7 @@ class Eos():
         self._compute_tf()
 
 def polyval_r(p, x):
+    """Identical to numpy.polyval except p is an array of coefficients 
+       of increasing order instead of decreasing order.
+    """
     return np.polyval(np.flipud(p), x)
