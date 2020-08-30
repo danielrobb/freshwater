@@ -27,4 +27,11 @@ class Constants():
         self.l = [0.15564, 4.046e-4, -8.15e-7, -5.58e-5]
         self.m = [1.593e-5]
 
-        # Convert lists to numpy arrays
+        # Heat capacity (Eq. 12)
+        self.n = [4.2174, -3.6608e-3, 1.3129e-4, -2.210e-6, 1.508e-8]
+        self.o = [-6.616e-5, 9.28e-6, -2.39e-8]
+        self.p = [-4.917e-4, 1.335e-5, -2.177e-7, 3.441e-6]
+        self.q = [1.50e-7]
+
+        # Freezing temperature (Eq. 18)
+        self.r = [-0.0137, -0.052, -7.48e-3]

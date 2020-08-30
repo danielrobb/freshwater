@@ -18,10 +18,20 @@ class TestEos(unittest.TestCase):
         tmd = self.eos.tmd
         self.assertAlmostEqual(tmd, 1.8181, places=4)
 
-    def test_sound_speed(self):
+    def test_u(self):
         self.eos = Eos(t=10, s=0.5, p=100)
-        sound_speed = self.eos.sound_speed
-        self.assertAlmostEqual(sound_speed, 1464.016, places=3)
+        u = self.eos.u
+        self.assertAlmostEqual(u, 1464.016, places=3)
+
+    def test_cp(self):
+        self.eos = Eos(t=10, s=0.5, p=100)
+        cp = self.eos.cp 
+        self.assertAlmostEqual(cp, 4155.55, places=2)
+
+    def test_tf(self):
+        self.eos = Eos(t=10, s=0.5, p=100)
+        tf = self.eos.tf
+        self.assertAlmostEqual(tf, -0.7877, places=4)
 
 if __name__ == "__main__":
     unittest.main()
