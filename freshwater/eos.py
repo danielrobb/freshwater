@@ -19,7 +19,7 @@ class Eos():
     tmd : array_like
         Temperature of maximum density (deg C)
     u : array_like
-        Speed of sound (m s^{-1})
+        Speed of sound (:math:`\mathrm{m s^{-1}}`)
     cp : array_like
         Specific heat capacity (J kg^{-1} deg^{-1})
     tf : array_like
