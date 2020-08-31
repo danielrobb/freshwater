@@ -59,7 +59,7 @@ class Eos():
     def _compute_rho(self):
         c = self.c
         rho = polyval_r(c.a, self.t) + polyval_r(c.b, self.t)*self.s
-        if self.p != 0:
+        if np.any(self.p) != 0:
             K = (polyval_r(c.c, self.t)
                  + polyval_r(c.d, self.t) * self.p
                  + (c.e[0] + c.e[1]*self.t + c.e[2]*self.p) * self.s)
