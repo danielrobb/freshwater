@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "freshwater"
-version = "0.1.1"
+version = "0.1.4"
 description = "Python module for estimating thermodynamic properties of water in freshwater lakes."
 license = "MIT"
 authors = ["danielrobb <danielrobb@gmail.com>"]
-readme = "README.md"
+readme = "README.rst"
 homepage = "https://github.com/danielrobb/freshwater"
 repository = "https://github.com/danielrobb/freshwater"
 documentation = "https://danielrobb.github.io/freshwater/"
