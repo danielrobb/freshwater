@@ -1,4 +1,8 @@
 docs-src/
+freshwater/
+tests/
+examples/
+
 poetry.lock
 
 
