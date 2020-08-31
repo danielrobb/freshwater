@@ -1,9 +1,8 @@
 
-.. include:: ../../readme.rst
+.. include:: readme.rst
 
-.. toctree::
-      :hidden:
+Indices and tables
+------------------
 
-      genindex
-
-
+* :ref:`genindex`
+* :ref:`modindex`
